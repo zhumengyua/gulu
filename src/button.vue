@@ -1,5 +1,4 @@
 <template>
-  <div>
     <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
       <g-icon class="icon" v-if="icon&&!loading" :name="icon"></g-icon>
       <g-icon class="loadding icon" v-if="loading" name="loading"></g-icon>
@@ -7,7 +6,6 @@
         <slot />
       </div>
     </button>
-  </div>
 </template>
 
 <script>
@@ -40,7 +38,8 @@ export default {
     transform: rotate(360deg);
   }
 }
-.g-button {
+
+.g-button {   
   display: inline-flex;
   justify-content: center; //上下居中
   align-items: center; //水平居中
@@ -54,6 +53,7 @@ export default {
   border-radius: var(--button-radius);
   border: 1px solid var(--border-color);
   background: var(--button-bg);
+ 
   //&表示当前选择器
   &:hover {
     border-color: var(--border-color-hover);
@@ -68,6 +68,7 @@ export default {
     order: 2;
   }
   > .icon {
+    
     order: 1;
     margin-right: 0.2em;
     margin-left: 0em;
