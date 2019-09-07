@@ -32,11 +32,11 @@
 
 <body>
     <div id="app">
-        <g-button icon="dianzan" icon-positiong="left">
+        <g-button :loading="loading1" @click="loading1=!loading1">
             点赞</g-button>
-        <g-button icon="shezhi" icon-position="left">
+        <g-button icon="shezhi" :loading="true">
             设置</g-button>
-        <g-button icon="down" icon-position="left">
+        <g-button icon="down" :loading="true" icon-position="right">
             下载</g-button>
     </div>
     <script src="/app.a6a4d504.js"></script>

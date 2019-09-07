@@ -2,13 +2,15 @@ import Vue from 'vue'
 import Button from './button'
 import Icon from './icon'
 
-Vue.component('g-button',Button)
-Vue.component('g-icon',Icon)
+Vue.component('g-button', Button)
+Vue.component('g-icon', Icon)
 new Vue({
     el: '#app',
-    components:{
-        Button,Icon
+    components: {
+        Button,
+        Icon
     },
     data: {
+        loading1: false
     }
 })

@@ -12427,6 +12427,10 @@ var _default = {
   //props: ["icon", "iconPosition"]
   props: {
     icon: {},
+    loading: {
+      type: Boolean,
+      default: false
+    },
     iconPosition: {
       type: String,
       default: "left",
@@ -12456,16 +12460,21 @@ exports.default = _default;
       "button",
       {
         staticClass: "g-button",
-        class: ((_obj = {}), (_obj["icon-" + _vm.iconPosition] = true), _obj)
+        class: ((_obj = {}), (_obj["icon-" + _vm.iconPosition] = true), _obj),
+        on: {
+          click: function($event) {
+            return _vm.$emit("click")
+          }
+        }
       },
       [
-        _vm.icon
+        _vm.icon && !_vm.loading
           ? _c("g-icon", { staticClass: "icon", attrs: { name: _vm.icon } })
           : _vm._e(),
         _vm._v(" "),
-        _vm.icon
+        _vm.loading
           ? _c("g-icon", {
-              staticClass: "loadding",
+              staticClass: "loadding icon",
               attrs: { name: "loading" }
             })
           : _vm._e(),
@@ -12600,7 +12609,9 @@ new _vue.default({
     Button: _button.default,
     Icon: _icon.default
   },
-  data: {}
+  data: {
+    loading1: false
+  }
 });
 },{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./icon":"src/icon.vue"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
-      <g-icon class="icon" v-if="icon" :name="icon"></g-icon>
-      <g-icon class="loadding" v-if="icon" name="loading"></g-icon>
+    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
+      <g-icon class="icon" v-if="icon&&!loading" :name="icon"></g-icon>
+      <g-icon class="loadding icon" v-if="loading" name="loading"></g-icon>
       <div class="content">
         <slot />
       </div>
@@ -15,6 +15,10 @@ export default {
   //props: ["icon", "iconPosition"]
   props: {
     icon: {},
+    loading: {
+      type: Boolean,
+      default: false
+    },
     iconPosition: {
       type: String,
       default: "left",
@@ -38,10 +42,10 @@ export default {
 }
 .g-button {
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; //上下居中
+  align-items: center; //水平居中
   //上面三句 居中
-  vertical-align: middle;
+  vertical-align: middle; //和外部的元素对其
   //上下不对齐 就加这个
   font-size: var(--font-size);
   height: var(--button--height);
@@ -79,7 +83,7 @@ export default {
       margin-left: 0.2em;
     }
   }
-  .loadding{
+  .loadding {
     animation: spin 1.5s infinite linear;
   }
 }
