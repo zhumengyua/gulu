@@ -9,8 +9,13 @@
 </template>
 
 <script>
+import Icon from './icon'
+
 export default {
   //props: ["icon", "iconPosition"]
+  components:{
+    'g-icon':Icon
+  },
   props: {
     icon: {},
     loading: {
@@ -68,7 +73,6 @@ export default {
     order: 2;
   }
   > .icon {
-    
     order: 1;
     margin-right: 0.2em;
     margin-left: 0em;
