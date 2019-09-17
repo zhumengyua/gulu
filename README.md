@@ -1,7 +1,13 @@
 # gulu 一个vue ui 的组件
 
 作者：zhumengyua
-
+[![Build Status](https://www.travis-ci.org/zhumengyua/gulu.svg?branch=master)](https://www.travis-ci.org/zhumengyua/gulu)
+##介绍
+##开始使用
+##文档
+##提问
+##变更记录
+##联系方式
 ##安装
 使用本框架前，请在css中开启 border-box
 
