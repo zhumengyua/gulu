@@ -32,7 +32,7 @@
 
         .box {
             margin: 20px;
-        
+
         }
     </style>
 </head>
@@ -44,7 +44,11 @@
             <g-input value="李四" readonly></g-input>
         </div>
         <div class="box">
-        <g-input value="王五" error="姓名不能少于2个字"></g-input></div>
+            <g-input value="王五" error="姓名不能少于2个字"></g-input>
+        </div>
+        <div class="box">
+            <g-input value="祝七" @change="inputChange"></g-input>
+        </div>
         <div class="box">
             <g-button :loading="loading1" @click="loading1=!loading1">
                 点赞</g-button>

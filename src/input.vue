@@ -1,6 +1,12 @@
 <template>
   <div class="warpprt" :class="{error}">
-    <input type="text" :value="value" :disabled="disabled" :readonly="readonly" />
+    <input type="text" :value="value" :disabled="disabled" :readonly="readonly" 
+    @change="$emit('change',$event)"
+    @input="$emit('change',$event)"
+    @foucs="$emit('change',$event)"
+    @blur="$emit('change',$event)"
+    />
+    <!-- 第一个change事件是触发change事件（自己的) 后面的$event是为了触发原生的change事件 emit事件：第一个是事件名，第二个是传过去的第一个参数，后面可以跟很多个参数传过去。 -->
     <template v-if="error">
       <icon name="shibai" class="icon-error"></icon>
       <span class="errorMessge">{{error}}</span>
