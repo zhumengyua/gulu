@@ -13,6 +13,7 @@ import Icon from './icon'
 
 export default {
   //props: ["icon", "iconPosition"]
+  name:'gulu-Button',
   components:{
     'g-icon':Icon
   },

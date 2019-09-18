@@ -13,18 +13,18 @@ describe('Button', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
             propsData: {
-                icon: 'settings'
+                icon: 'shezhi'
             }
         }).$mount()
         const useElement = vm.$el.querySelector('use')
-        expect(useElement.getAttribute('xlink:href')).to.equal('#i-settings')
+        expect(useElement.getAttribute('xlink:href')).to.equal('#i-shezhi')
         vm.$destroy()
     })
     it('可以设置loading.', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
             propsData: {
-                icon: 'settings',
+                icon: 'shezhi',
                 loading: true
             }
         }).$mount()
@@ -39,7 +39,7 @@ describe('Button', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
             propsData: {
-                icon: 'settings',
+                icon: 'zuo',
             }
         }).$mount(div)
         const icon = vm.$el.querySelector('svg')
@@ -53,7 +53,7 @@ describe('Button', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
             propsData: {
-                icon: 'settings',
+                icon: 'zuo',
                 iconPosition: 'right'
             }
         }).$mount(div)
@@ -66,7 +66,7 @@ describe('Button', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
             propsData: {
-                icon: 'settings',
+                icon: 'shezhi',
             }
         }).$mount()
 

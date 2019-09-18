@@ -1,20 +1,22 @@
 <template>
-  <div>
-    <svg class="g-icon bbbbbbb">
+
+    <svg class="g-icon">
       <use :xlink:href="`#i-${name}`" />
     </svg>
-  </div>
+
 </template>
 
 <script>
 import './svg'
 export default {
+    name:'gulu-buttonIcon',
     props:['name']
 };
 </script>
 
 <style lang="scss" scoped>
         .g-icon {
+          display: inline-block;
             width: 1em;
             height: 1em;
             vertical-align: -0.15em;
