@@ -1,10 +1,10 @@
 <template>
   <div class="warpprt" :class="{error}">
     <input type="text" :value="value" :disabled="disabled" :readonly="readonly" 
-    @change="$emit('change',$event)"
-    @input="$emit('change',$event)"
-    @foucs="$emit('change',$event)"
-    @blur="$emit('change',$event)"
+    @change="$emit('change', $event.target.value)"
+      @input="$emit('input', $event.target.value)"
+      @focus="$emit('focus', $event.target.value)"
+      @blur="$emit('blur', $event.target.value)"
     />
     <!-- 第一个change事件是触发change事件（自己的) 后面的$event是为了触发原生的change事件 emit事件：第一个是事件名，第二个是传过去的第一个参数，后面可以跟很多个参数传过去。 -->
     <template v-if="error">

@@ -126,8 +126,8 @@ describe('Input', () => {
                 }
             }).$mount()
             const useElement = vm.$el.querySelector('use')
-            expect(useElement.getAttribute('xlink:href')).to.equal('#i-error')
-            const errorMessage = vm.$el.querySelector('.errorMessage')
+            expect(useElement.getAttribute('xlink:href')).to.equal('#i-shibai')
+            const errorMessage = vm.$el.querySelector('.errorMessge')
             expect(errorMessage.innerText).to.equal('你错了')
         })
     })
