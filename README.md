@@ -53,10 +53,6 @@ export default {
 4.引入svg symbols
  ```   <script src="//at.alicdn.com/t/font_1394984_wia9ihpt4d.js"></script>```
 
-##文档
-##提问
 ##变更记录
 ##联系方式
-##安装
-
-##使用
+892244044@qq.com
