@@ -1,11 +1,7 @@
 <template>
-  <div
-    class="col"
-    :class="[span && `col-${span}`,offset && `offset-${offset}`]"
-    :style="{paddingLeft:gutter/2+'px',paddingRight:gutter/2+'px'}"
-  >
-  <div style="border:1px solid green;height:100px">
-    <slot></slot></div>
+  <div class="col" :class="colClass" :style="colStyle">
+      <slot></slot>
+  
   </div>
 </template>
 
@@ -14,15 +10,25 @@ export default {
   name: "GuluCol",
   props: {
     span: [Number, String],
-    offset: [Number, String],
-    gutter:[Number,String]
+    offset: [Number, String]
   },
-  created(){
-    console.log('col created')
+  data() {
+    return {
+      gutter: 0
+    };
   },
-  mounted(){
-    console.log('col mounted')
-  }
+  computed: {
+    colClass() {
+      let {span,offset}=this
+      return [span && `col-${span}`,offset && `offset-${offset}`];
+    },
+    colStyle() {
+      return {
+        paddingLeft: this.gutter / 2 + "px",
+        paddingRight: this.gutter / 2 + "px"
+      };
+    }
+  },
 };
 </script>
 

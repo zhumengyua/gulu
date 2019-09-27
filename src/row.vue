@@ -1,5 +1,5 @@
 <template>
-    <div class="row" :style="{marginLeft:-gutter/2+'px',marginRight:-gutter/2+'px'}">
+    <div class="row" :style="rowStyle">
 <slot>
     </div>
 </template>
@@ -12,21 +12,20 @@
          type:[Number,String]
      }
  },
- created(){
-console.log('row created')
- },
  mounted(){
-     console.log('row mounted')
-     console.log(this.$children)
      this.$children.forEach((vm)=>{
          vm.gutter=this.gutter
      })
+ },
+ computed(){
+     return{
+    rowStyle(){
+         marginLeft:-this.gutter/2+'px'
+         marginRight:-this.gutter/2+'px'
+     }
+     }
  }
-    }
-  var div=document.createElement('div')//created
-  var childDiv =document.createElement('div')//child cerated
-  div.appendChild(childDiv)//child mounted
-  document.body.appendChild(div)
+}
 </script>
 
 <style lang="scss" scoped>
