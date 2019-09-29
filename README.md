@@ -8,7 +8,6 @@
 这是我学习VUE的时候开发的组件
 ##开始使用
 使用本框架前，请在css中开启 border-box
-
 ```
 *{box-sizing:border-box}
 *::before{box-sizing:border-box}
@@ -53,6 +52,15 @@ export default {
 4.引入svg symbols
  ```   <script src="//at.alicdn.com/t/font_1394984_wia9ihpt4d.js"></script>```
 
-##变更记录
+##参数详细说明
+网格：
+在g-col中: 
+span:后面的数字表示占用了几份（总共24份）
+offset:后面数字表示前面空几份
+:ipad/:narrow-pc/：pc-/wide-pc:设置如果是这些设备的时候,应该怎么分
+输入框：
+disabled：禁止输入禁止点击（灰色）
+readonly：禁止输入禁止点击（白色）
+error="":红色警告框,后接提示文字
 ##联系方式
 892244044@qq.com

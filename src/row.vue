@@ -17,13 +17,12 @@
          vm.gutter=this.gutter
      })
  },
- computed(){
-     return{
-    rowStyle(){
-         marginLeft:-this.gutter/2+'px'
+ computed:{
+    rowStyle(){   
+         return{
+         marginLeft:-this.gutter/2+'px',
          marginRight:-this.gutter/2+'px'
-     }
-     }
+     }}
  }
 }
 </script>
